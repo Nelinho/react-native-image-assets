@@ -4,16 +4,18 @@
 <hr>
 
 
-Script class generator to require dynamically local images by static methods in react-native project.
+Script class generator to load dynamically local images by static methods in react-native project.
 
 
 <h2>Generate a class that import all images from a folder.</h2>
 
-<p>You can use: $ node image-list-gen  [ --folder=folder name ] [ --class=class name file (without ".js") ]</p>
+><p>You can use: $ node image-list-gen  [ --folder=folder name ] [ --class=class name file (without ".js") ]</p>
 <p>Eg. <code>$ node image-list-gen --folder=assets --class=MyImages</code></p>
+
+<h3>that's it! ;)</h3>
 <hr>
 
-<p>You can insert a shortcut in package.json to ensure that your local images are linked in the class before start the app.</p>
+><p>You can insert a shortcut in package.json to ensure that your local images are linked in the class before start the app.</p>
 
 <pre>
 "scripts": {
@@ -53,7 +55,7 @@ function renderAllImages() {
     let imgList = Object.keys(MyImages);
     return imgList.map((item) => {
         return (
-            &lt;Image source={MyImages[item]} key={item} style={styles.image} /&gt;
+            &lt;Image source={MyImages[item]} key={item} /&gt;
         );
     });
 }
@@ -79,7 +81,7 @@ function renderAllImages() {
 function getRandomImage() {
   const randomImages = ['_facebook', '_linkedin', '_youtube'];
   const chosenImage = MyImages[randomImages[Math.round(Math.random() * 2)]];
-  return &lt;Image source={chosenImage} style={styles.image} /&gt;
+  return &lt;Image source={chosenImage} /&gt;
 }
 </pre>
 ...
@@ -90,9 +92,15 @@ function getRandomImage() {
 </pre>
 <img src="https://raw.githubusercontent.com/Nelinho/react-native-image-assets/master/screenshots/randomImage.png" />
     
+<h2>Recovering android and/or iOS folder (if needed)</h2>
+<p>Run <code> $ react-native upgrade</code> to generate /ios and /android folders again.</p>
+<p>Run <code> $ react-native link</code> for any native dependency.</p>
+<p>Finally run <code> $ react-native run-ios</code> or anything you want.</p>
 
+<hr>
+<br><br>
 
-I started learning react-native a few days ago and have not yet <del>accepted</del> adapted how lib loads local images, probably there is a better way available on web I dont know yet, than "require (../../../../../images/my-struggle-image.png). For now, it will be my way :)
+>I started learning react-native a few days ago and have not yet <del>accepted</del> adapted how lib loads local images, probably there is a better way available on web I dont know yet, than "require (../../../../../images/my-struggle-image.png). For now, it will be my way :)
 <br><br>Feel free to change as you wish.
 
 <br>

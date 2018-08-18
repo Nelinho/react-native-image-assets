@@ -1,4 +1,4 @@
-export default class Funfou {
+export default class MyImages {
     static _badoo = require('./assets/badoo.png');
     static _behance = require('./assets/behance.png');
     static _deviantart = require('./assets/deviantart.png');

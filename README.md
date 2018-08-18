@@ -41,5 +41,7 @@ And run the command:<br>
 
 <hr>
 
+ Icon made by Freepik from www.flaticon.com 
+
 I started learning react-native a few days ago and have not yet <del>accepted</del> adapted how lib loads local images, probably there is a better way available on web I dont know yet, than "require (../../../../../images/my-struggle-image.png). For now, it will be my way hahaha
 <br><br>Feel free to change as you wish, if you wish :)
